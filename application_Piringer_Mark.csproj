@@ -127,6 +127,7 @@
       <DependentUpon>bejelentkezes.xaml</DependentUpon>
     </Compile>
     <Compile Include="connect.cs" />
+    <Compile Include="dataBaseSatemantes.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
