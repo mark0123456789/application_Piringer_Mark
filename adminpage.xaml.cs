@@ -24,5 +24,18 @@ namespace application_Piringer_Mark
         {
             InitializeComponent();
         }
+        private void LoadFelhasznalok()
+        {
+            dgFelhasznalok.ItemsSource = DataBaseMentes.GetAllFelhasznalok();
+        }
+
+        private void BtnTorol_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgFelhasznalok.SelectedItem is Felhasznalo f)
+            {
+                DataBaseMentes.DeleteFelhasznalo(f.Id);
+                LoadFelhasznalok();
+            }
+        }
     }
 }

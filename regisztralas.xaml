@@ -7,8 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
-
-    <Grid>
-        
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox x:Name="txtUsername" PlaceholderText="Felhasználónév" Margin="5"/>
+        <PasswordBox x:Name="txtPassword" PlaceholderText="Jelszó" Margin="5"/>
+        <Button Content="Regisztrálás" Click="BtnRegisztral_Click" Margin="5"/>
+    </StackPanel>
 </Page>

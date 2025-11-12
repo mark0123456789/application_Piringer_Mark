@@ -24,5 +24,18 @@ namespace application_Piringer_Mark
         {
             InitializeComponent();
         }
+        private void BtnBejelentkezes_Click(object sender, RoutedEventArgs e)
+        {
+            Bejelentkezes login = new Bejelentkezes();
+            login.Show();
+            this.Close();
+        }
+
+        private void BtnRegisztralas_Click(object sender, RoutedEventArgs e)
+        {
+            Regisztralas reg = new Regisztralas();
+            reg.Show();
+            this.Close();
+        }
     }
 }

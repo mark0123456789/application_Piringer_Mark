@@ -20,9 +20,27 @@ namespace application_Piringer_Mark
     /// </summary>
     public partial class Page1 : Page
     {
-        public Page1()
+        public Regisztralas()
         {
             InitializeComponent();
+        }
+
+        private void BtnRegisztral_Click(object sender, RoutedEventArgs e)
+        {
+            string user = txtUsername.Text;
+            string pass = txtPassword.Password;
+
+            if (DataBaseMentes.Register(user, pass))
+            {
+                MessageBox.Show("Sikeres regisztráció!");
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Hiba történt a regisztráció során!");
+            }
         }
     }
 }

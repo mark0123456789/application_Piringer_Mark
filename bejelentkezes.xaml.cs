@@ -24,5 +24,21 @@ namespace application_Piringer_Mark
         {
             InitializeComponent();
         }
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string user = txtUsername.Text;
+            string pass = txtPassword.Password;
+
+            if (DataBaseMentes.Login(user, pass))
+            {
+                AdminPage admin = new AdminPage();
+                admin.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Hibás felhasználónév vagy jelszó!");
+            }
+        }
     }
 }

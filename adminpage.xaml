@@ -8,7 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="adminpage">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <DataGrid x:Name="dgFelhasznalok" Height="200" Margin="5"/>
+        <Button Content="Törlés" Click="BtnTorol_Click" Margin="5"/>
+    </StackPanel>
 </Page>
